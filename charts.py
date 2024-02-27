@@ -10,17 +10,18 @@ dfd = pd.read_excel('covid-data deaths.xlsx')
 dfv = pd.read_excel('covid-data vax.xlsx')
 
 
-print(dfd.loc[dfd['location'] == 'Afghanistan'])
+afgan = dfd.loc[dfd['location'] == 'Afghanistan']
+
+#print(afgan['total_cases'])
 
 
+xpoints = np.array(afgan['date'])
+ypoints = np.array(afgan['total_cases'])
 
-
-xpoints = np.array([0, 6])
-ypoints = np.array([0, 250])
-
-#plt.title('covid data')
-#plt.xlabel('date')
-#plt.ylabel('count')
-#plt.legend
-#plt.plot(xpoints, ypoints, label = 'covid count')
-# plt.show()
+plt.title(' Afghanistan covid cases')
+plt.xlabel('date')
+plt.ylabel('cases')
+plt.legend
+plt.grid(axis = 'y')
+plt.plot(xpoints, ypoints, label = 'covid count', marker = '*')
+plt.show()
