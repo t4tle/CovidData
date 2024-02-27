@@ -5,13 +5,22 @@ import numpy as np
 
 
 
-df = pd.read_excel('covid-data deaths.xlsx')
+dfd = pd.read_excel('covid-data deaths.xlsx')
 
-df2 = pd.read_excel('covid-data vax.xlsx')
+dfv = pd.read_excel('covid-data vax.xlsx')
+
+
+print(dfd.loc[dfd['location'] == 'Afghanistan'])
+
+
 
 
 xpoints = np.array([0, 6])
 ypoints = np.array([0, 250])
 
-plt.plot(xpoints, ypoints)
-plt.show()
+#plt.title('covid data')
+#plt.xlabel('date')
+#plt.ylabel('count')
+#plt.legend
+#plt.plot(xpoints, ypoints, label = 'covid count')
+# plt.show()
